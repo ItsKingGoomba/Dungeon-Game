@@ -9,12 +9,16 @@ public class Game
 	public Game()
 	{
 		m_isRunning = false;
-		
 	}
 	
 	public void Start()
 	{
 		m_isRunning = true;
+	}
+	
+	public void Stop()
+	{
+		m_isRunning = false;
 	}
 	
 	public void Run()
@@ -23,8 +27,25 @@ public class Game
 		{
 			Scanner input = new Scanner(System.in);
 			String inputString = input.nextLine();
-			System.out.println("Input: " + inputString);
+			if (ProcessInput(inputString))
+			{
+				
+			}
+			else
+			{
+				System.out.println("This is wrong");
+			}
 		}
 	}
 	
+	public boolean ProcessInput(String input)
+	{
+		if (input.equals("quit"))
+		{
+			Stop();
+			return true;
+		}
+		
+		return false;
+	}
 }
