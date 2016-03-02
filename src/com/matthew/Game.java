@@ -33,7 +33,7 @@ public class Game
 			}
 			else
 			{
-				System.out.println("This is wrong");
+				System.out.println("Can not compute");
 			}
 		}
 	}
@@ -42,10 +42,25 @@ public class Game
 	{
 		if (input.equals("quit"))
 		{
+			System.out.println("GoodBye");
 			Stop();
 			return true;
 		}
-		
+		else if (input.equals("Attack"))
+		{
+			System.out.println("Ow that hurts");
+			return true;
+		}
+		else if (input.equals("move"))
+		{
+			System.out.println("You moved to the East");
+			return true;
+		}
+		else if (input.equals("loot"))
+		{
+			System.out.println("You found a shiny penny");
+			return true;
+		}
 		return false;
 	}
 }
