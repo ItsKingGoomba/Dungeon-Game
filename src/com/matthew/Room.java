@@ -3,8 +3,18 @@ package com.matthew;
 public class Room {
 	
 	// Code Review: member variables should be prefixed by a "m_". Example: "m_roomName"
-	private String roomName;
-
+	private String m_roomName;
+		
+		public Room()
+		{
+			m_roomName = "Dark room";
+		}
+		
+		String roomName(String aRoom)
+		{
+			m_roomName = aRoom;
+			return m_roomName;
+		}
 	// Code Review: Where is the constuctor that initializes this Room?
 	// When we create a room in the game world, we should supply it with a String name. That name should become the name of the room.
 	// In other words, we need to create a constructor with a String parameter
