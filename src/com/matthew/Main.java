@@ -8,9 +8,8 @@ public class Main
 		Game game = new Game();
 		game.Start();
 		
-		Room room = new Room();
-		String rName = room.roomName("Candy Room");
-		System.out.println(rName);
+		Room room = new Room("Candy room");
+		System.out.println(room.getM_roomName());
 		
 		game.Run();
 	}
