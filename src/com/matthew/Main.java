@@ -9,7 +9,7 @@ public class Main
 		game.Start();
 		
 		Room room = new Room("Candy room");
-		System.out.println(room.getM_roomName());
+		System.out.println(room.GetRoomName());
 		
 		game.Run();
 	}
