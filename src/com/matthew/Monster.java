@@ -13,33 +13,33 @@ public class Monster
 		m_strength = strength;
 	}
 
-	public String getmonsterName() 
+	public String GetMonsterName() 
 	{
 		return m_monsterName;
 	}
 
-	public void setmonsterName(String monsterName) 
+	public void SetMonsterName(String monsterName) 
 	{
-		this.m_monsterName = monsterName;
+		m_monsterName = monsterName;
 	}
 
-	public int gethealth() 
+	public int GetHealth() 
 	{
 		return m_health;
 	}
 
-	public void sethealth(int health) 
+	public void SetHealth(int health) 
 	{
-		this.m_health = health;
+		m_health = health;
 	}
 
-	public int getstrength()
+	public int GetStrength()
 	{
 		return m_strength;
 	}
 
-	public void setstrength(int strength) 
+	public void SetStrength(int strength) 
 	{
-		this.m_strength = strength;
+		m_strength = strength;
 	}
 }

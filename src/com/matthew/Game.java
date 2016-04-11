@@ -5,10 +5,18 @@ import java.util.Scanner;
 public class Game 
 {
 	private boolean m_isRunning; 
+	private Room m_room;
+	private Monster m_goblin;
 	
 	public Game()
 	{
 		m_isRunning = false;
+		m_room = new Room("Candy room");
+		System.out.println(m_room.GetRoomName());
+		
+		m_goblin = new Monster("Big Goblin",10,5);
+		m_room.SetRoomMonster(m_goblin);
+		System.out.println(m_room.GetRoomMonster().GetMonsterName());	
 	}
 	
 	public void Start()
@@ -37,7 +45,7 @@ public class Game
 			}
 		}
 	}
-	
+	//Game commands to do things
 	public boolean ProcessInput(String input)
 	{
 		if (input.equals("quit"))
@@ -46,9 +54,10 @@ public class Game
 			Stop();
 			return true;
 		}
+		//when attack command print monster health
 		else if (input.equals("Attack"))
 		{
-			System.out.println("Ow that hurts");
+			System.out.println(m_room.GetRoomMonster().GetHealth());
 			return true;
 		}
 		else if (input.equals("move"))
